@@ -1,0 +1,683 @@
+/*------------------------------------------------------------------
+[Default Stylesheet]
+ 
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+	[Layout]
+
+	01. Font Face
+	02. Common CSS
+	03. Margin and Padding
+	04. Heading
+
+-------------------------------------------------------------------*/
+
+/* Font Face */
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('../fonts/SofiaProBlack.eot');
+    src: url('../fonts/SofiaProBlack.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SofiaProBlack.woff2') format('woff2'),
+        url('../fonts/SofiaProBlack.woff') format('woff'),
+        url('../fonts/SofiaProBlack.ttf') format('truetype'),
+        url('../fonts/SofiaProBlack.svg#SofiaProBlack') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('../fonts/SofiaProBlack-Italic.eot');
+    src: url('../fonts/SofiaProBlack-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SofiaProBlack-Italic.woff2') format('woff2'),
+        url('../fonts/SofiaProBlack-Italic.woff') format('woff'),
+        url('../fonts/SofiaProBlack-Italic.ttf') format('truetype'),
+        url('../fonts/SofiaProBlack-Italic.svg#SofiaProBlack-Italic') format('svg');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('../fonts/SofiaProBold.eot');
+    src: url('../fonts/SofiaProBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SofiaProBold.woff2') format('woff2'),
+        url('../fonts/SofiaProBold.woff') format('woff'),
+        url('../fonts/SofiaProBold.ttf') format('truetype'),
+        url('../fonts/SofiaProBold.svg#SofiaProBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('../fonts/SofiaProMedium.eot');
+    src: url('../fonts/SofiaProMedium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SofiaProMedium.woff2') format('woff2'),
+        url('../fonts/SofiaProMedium.woff') format('woff'),
+        url('../fonts/SofiaProMedium.ttf') format('truetype'),
+        url('../fonts/SofiaProMedium.svg#SofiaProMedium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('../fonts/SofiaProBold-Italic.eot');
+    src: url('../fonts/SofiaProBold-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SofiaProBold-Italic.woff2') format('woff2'),
+        url('../fonts/SofiaProBold-Italic.woff') format('woff'),
+        url('../fonts/SofiaProBold-Italic.ttf') format('truetype'),
+        url('../fonts/SofiaProBold-Italic.svg#SofiaProBold-Italic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('../fonts/SofiaProExtraLight-Italic.eot');
+    src: url('../fonts/SofiaProExtraLight-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SofiaProExtraLight-Italic.woff2') format('woff2'),
+        url('../fonts/SofiaProExtraLight-Italic.woff') format('woff'),
+        url('../fonts/SofiaProExtraLight-Italic.ttf') format('truetype'),
+        url('../fonts/SofiaProExtraLight-Italic.svg#SofiaProExtraLight-Italic') format('svg');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('../fonts/SofiaProLight-Italic.eot');
+    src: url('../fonts/SofiaProLight-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SofiaProLight-Italic.woff2') format('woff2'),
+        url('../fonts/SofiaProLight-Italic.woff') format('woff'),
+        url('../fonts/SofiaProLight-Italic.ttf') format('truetype'),
+        url('../fonts/SofiaProLight-Italic.svg#SofiaProLight-Italic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('../fonts/SofiaProLight.eot');
+    src: url('../fonts/SofiaProLight.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SofiaProLight.woff2') format('woff2'),
+        url('../fonts/SofiaProLight.woff') format('woff'),
+        url('../fonts/SofiaProLight.ttf') format('truetype'),
+        url('../fonts/SofiaProLight.svg#SofiaProLight') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('../fonts/SofiaProLight_1.eot');
+    src: url('../fonts/SofiaProLight_1.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SofiaProLight_1.woff2') format('woff2'),
+        url('../fonts/SofiaProLight_1.woff') format('woff'),
+        url('../fonts/SofiaProLight_1.ttf') format('truetype'),
+        url('../fonts/SofiaProLight_1.svg#SofiaProLight') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('../fonts/SofiaProExtraLight.eot');
+    src: url('../fonts/SofiaProExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SofiaProExtraLight.woff2') format('woff2'),
+        url('../fonts/SofiaProExtraLight.woff') format('woff'),
+        url('../fonts/SofiaProExtraLight.ttf') format('truetype'),
+        url('../fonts/SofiaProExtraLight.svg#SofiaProExtraLight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('../fonts/SofiaProMedium-Italic.eot');
+    src: url('../fonts/SofiaProMedium-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SofiaProMedium-Italic.woff2') format('woff2'),
+        url('../fonts/SofiaProMedium-Italic.woff') format('woff'),
+        url('../fonts/SofiaProMedium-Italic.ttf') format('truetype'),
+        url('../fonts/SofiaProMedium-Italic.svg#SofiaProMedium-Italic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sofia Pro Semi';
+    src: url('../fonts/SofiaProSemiBold.eot');
+    src: url('../fonts/SofiaProSemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SofiaProSemiBold.woff2') format('woff2'),
+        url('../fonts/SofiaProSemiBold.woff') format('woff'),
+        url('../fonts/SofiaProSemiBold.ttf') format('truetype'),
+        url('../fonts/SofiaProSemiBold.svg#SofiaProSemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('../fonts/SofiaProUltraLight-Italic.eot');
+    src: url('../fonts/SofiaProUltraLight-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SofiaProUltraLight-Italic.woff2') format('woff2'),
+        url('../fonts/SofiaProUltraLight-Italic.woff') format('woff'),
+        url('../fonts/SofiaProUltraLight-Italic.ttf') format('truetype'),
+        url('../fonts/SofiaProUltraLight-Italic.svg#SofiaProUltraLight-Italic') format('svg');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('../fonts/SofiaProUltraLight.eot');
+    src: url('../fonts/SofiaProUltraLight.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SofiaProUltraLight.woff2') format('woff2'),
+        url('../fonts/SofiaProUltraLight.woff') format('woff'),
+        url('../fonts/SofiaProUltraLight.ttf') format('truetype'),
+        url('../fonts/SofiaProUltraLight.svg#SofiaProUltraLight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('../fonts/SofiaProRegular.eot');
+    src: url('../fonts/SofiaProRegular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SofiaProRegular.woff2') format('woff2'),
+        url('../fonts/SofiaProRegular.woff') format('woff'),
+        url('../fonts/SofiaProRegular.ttf') format('truetype'),
+        url('../fonts/SofiaProRegular.svg#SofiaProRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('../fonts/SofiaProRegular-Italic.eot');
+    src: url('../fonts/SofiaProRegular-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SofiaProRegular-Italic.woff2') format('woff2'),
+        url('../fonts/SofiaProRegular-Italic.woff') format('woff'),
+        url('../fonts/SofiaProRegular-Italic.ttf') format('truetype'),
+        url('../fonts/SofiaProRegular-Italic.svg#SofiaProRegular-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sofia Pro Semi';
+    src: url('../fonts/SofiaProSemiBold-Italic.eot');
+    src: url('../fonts/SofiaProSemiBold-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SofiaProSemiBold-Italic.woff2') format('woff2'),
+        url('../fonts/SofiaProSemiBold-Italic.woff') format('woff'),
+        url('../fonts/SofiaProSemiBold-Italic.ttf') format('truetype'),
+        url('../fonts/SofiaProSemiBold-Italic.svg#SofiaProSemiBold-Italic') format('svg');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../fonts/RobotoSlab-Bold.eot');
+    src: url('../fonts/RobotoSlab-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/RobotoSlab-Bold.woff2') format('woff2'),
+        url('../fonts/RobotoSlab-Bold.woff') format('woff'),
+        url('../fonts/RobotoSlab-Bold.ttf') format('truetype'),
+        url('../fonts/RobotoSlab-Bold.svg#RobotoSlab-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../fonts/RobotoSlab-Black.eot');
+    src: url('../fonts/RobotoSlab-Black.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/RobotoSlab-Black.woff2') format('woff2'),
+        url('../fonts/RobotoSlab-Black.woff') format('woff'),
+        url('../fonts/RobotoSlab-Black.ttf') format('truetype'),
+        url('../fonts/RobotoSlab-Black.svg#RobotoSlab-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../fonts/RobotoSlab-ExtraBold.eot');
+    src: url('../fonts/RobotoSlab-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/RobotoSlab-ExtraBold.woff2') format('woff2'),
+        url('../fonts/RobotoSlab-ExtraBold.woff') format('woff'),
+        url('../fonts/RobotoSlab-ExtraBold.ttf') format('truetype'),
+        url('../fonts/RobotoSlab-ExtraBold.svg#RobotoSlab-ExtraBold') format('svg');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../fonts/RobotoSlab-SemiBold.eot');
+    src: url('../fonts/RobotoSlab-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/RobotoSlab-SemiBold.woff2') format('woff2'),
+        url('../fonts/RobotoSlab-SemiBold.woff') format('woff'),
+        url('../fonts/RobotoSlab-SemiBold.ttf') format('truetype'),
+        url('../fonts/RobotoSlab-SemiBold.svg#RobotoSlab-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../fonts/RobotoSlab-Regular.eot');
+    src: url('../fonts/RobotoSlab-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/RobotoSlab-Regular.woff2') format('woff2'),
+        url('../fonts/RobotoSlab-Regular.woff') format('woff'),
+        url('../fonts/RobotoSlab-Regular.ttf') format('truetype'),
+        url('../fonts/RobotoSlab-Regular.svg#RobotoSlab-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../fonts/RobotoSlab-ExtraLight.eot');
+    src: url('../fonts/RobotoSlab-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/RobotoSlab-ExtraLight.woff2') format('woff2'),
+        url('../fonts/RobotoSlab-ExtraLight.woff') format('woff'),
+        url('../fonts/RobotoSlab-ExtraLight.ttf') format('truetype'),
+        url('../fonts/RobotoSlab-ExtraLight.svg#RobotoSlab-ExtraLight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../fonts/RobotoSlab-Light.eot');
+    src: url('../fonts/RobotoSlab-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/RobotoSlab-Light.woff2') format('woff2'),
+        url('../fonts/RobotoSlab-Light.woff') format('woff'),
+        url('../fonts/RobotoSlab-Light.ttf') format('truetype'),
+        url('../fonts/RobotoSlab-Light.svg#RobotoSlab-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../fonts/RobotoSlab-Medium.eot');
+    src: url('../fonts/RobotoSlab-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/RobotoSlab-Medium.woff2') format('woff2'),
+        url('../fonts/RobotoSlab-Medium.woff') format('woff'),
+        url('../fonts/RobotoSlab-Medium.ttf') format('truetype'),
+        url('../fonts/RobotoSlab-Medium.svg#RobotoSlab-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../fonts/RobotoSlab-Thin.eot');
+    src: url('../fonts/RobotoSlab-Thin.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/RobotoSlab-Thin.woff2') format('woff2'),
+        url('../fonts/RobotoSlab-Thin.woff') format('woff'),
+        url('../fonts/RobotoSlab-Thin.ttf') format('truetype'),
+        url('../fonts/RobotoSlab-Thin.svg#RobotoSlab-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+/* Common CSS */
+html {
+	margin: 0;
+	padding: 0;
+	font-family: 'Sofia Pro';
+	font-size: 16px;
+	color: #1e1e1e;
+	background-color: #f1f1f1;
+	height: 100%;
+}
+body {
+	font-size: 16px;
+	color: #1e1e1e;
+	font-family: 'Sofia Pro';
+	min-height: 100%;
+	position: relative;
+	background-color: #f1f1f1;
+}
+::-moz-selection {
+    background: #3278C3;
+    color: #fff;
+}
+::selection {
+    background: #3278C3;
+    color: #fff;
+}
+section, .section-cta {
+	position: relative;
+	padding: 90px 0;
+	overflow: hidden;
+	background: #fff;
+}
+article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{
+	display:block;
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Sofia Pro';
+	color: #1e1e1e;
+	margin: 0;
+}
+h3 {
+	font-size: 20px;
+    font-weight: 600;
+}
+h4 {
+	font-size: 18px;
+    font-weight: 600;
+}
+p {
+    font-size: 1.1em;
+    line-height: 2em;
+    margin-bottom: 0;
+    color: #1e1e1e;
+}
+a {
+	position: relative;
+	color: #434343;
+}
+a:hover {
+    text-decoration: none;
+    color: #32c0c3;
+    outline: none;
+}
+img {
+    vertical-align: middle;
+    max-width: 100%;
+	width: 75px;
+}
+figure {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+figure img, a {
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+ul li {
+	margin: 0;
+	padding: 0;
+}
+.default-btn {
+    color: #fff;
+    font-size: 1.1em;
+    line-height: 1em;
+    position: relative;
+    display: inline-block;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    padding: 16px 50px;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #32c0c3;
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+	/* min-width: 230px; */
+    text-align: center;
+    letter-spacing: 1px;
+}
+:focus, :active, button:focus {
+	outline: none;
+}
+.border-btn {
+    /* background: transparent; */
+    /* border: 2px solid #fff; */
+    /* color: #fff; */
+    /* border-radius: 0; */
+    /* padding: 20px 40px; */
+    /* font-size: 16px; */
+    /* letter-spacing: .5px;	 */
+}
+.default-btn.border-btn {
+    border: 2px solid #32c0c3;
+    background: #fff;
+    color: #32c0c3;
+	min-width: 150px;
+}
+.cta-block .default-btn.border-btn {
+    border-color: #343a40;
+    background: #343a40;
+    color: #fff;
+}
+.default-btn.border-btn.active-btn {
+	background: #32c0c3;
+	color: #fff;
+}
+.cta-block .default-btn.border-btn:hover {
+    background: #fff;
+    color: #32c0c3;
+    border-color: #fff;
+}
+.default-btn.border-btn:hover {
+    background: #32c0c3;
+    color: #fff;
+}
+.btn-arrow.border-btn:hover span {
+	color: #fff;
+}
+.cta-block .btn-arrow.border-btn:hover span {
+	color: #32c0c3;
+}
+.default-btn.border-btn:hover {
+    /* background: #fff; */
+    /* border: 2px solid #fff; */
+    /* color: #32c0c3; */
+	/* box-shadow: none; */
+}
+.default-btn:hover {
+	color: #32c0c3;
+	background: #fff;
+}
+.btn-arrow span {
+	display: inline-block;
+	position: relative;
+	will-change: transform;
+	-webkit-transition: all .3s ease-out;
+	transition: all .3s ease-out;
+}
+.btn-arrow:hover span {
+	-webkit-transform: translate3d(-1rem, 0, 0);
+	transform: translate3d(-1rem, 0, 0);
+	color: #32c0c3;
+}
+.btn-arrow svg {
+	position: absolute;
+	width: 1.1em;
+	right: 0px;
+	right: 0rem;
+	opacity: 0;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	will-change: right, opacity;
+	-webkit-transition: all .3s ease-out;
+	transition: all .3s ease-out;
+}
+.btn-arrow svg * {
+	stroke-width: 5;
+	stroke-color: transparent;
+}
+.btn-arrow:hover svg {
+	opacity: 1;
+	right: -2rem;
+}
+
+/* Link */
+.a-link {
+    padding: 0 0 .2em;
+	display: inline-block;
+	font-size: 17px;
+}
+.a-link-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+	background-color: #32c0c3;
+    border-color: #32c0c3;
+    -webkit-transition: width .3s cubic-bezier(.785,.135,.15,.86);
+    -moz-transition: width .3s cubic-bezier(.785,.135,.15,.86);
+    -o-transition: width .3s cubic-bezier(.785,.135,.15,.86);
+    transition: width .3s cubic-bezier(.785,.135,.15,.86);
+}
+.a-link:hover .a-link-line, .sec-sub-title:hover .a-link-line, article.hitmag-post:hover .a-link-line {
+    width: 100%;
+}
+.font-sofia {
+	font-family: 'Sofia Pro';
+}
+.modal-header {
+    padding: 20px 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.14);
+}
+.modal-body {
+    padding: 30px;
+}
+/* .modal-content {
+	border-radius: 0;
+    background: none;
+} */
+.modal-backdrop.show {
+    filter: alpha(opacity=90);
+    opacity: .9;
+}
+.modal-title {
+	font-weight: 600;
+    font-size: 20px;
+}
+#toTop{
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    cursor: pointer;
+    display: none;
+}
+#toTop.back-to-top {
+	z-index: 10;
+    color: #fff;
+    background-color: #3278C3;
+    font-size: 18px;
+    height: 40px;
+    width: 40px;
+    font-weight: 500;
+    line-height: 36px;
+    padding: 0px 13px 0;
+    border: 2px solid #3278C3;
+    border-radius: 30px;
+    transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+}
+#toTop:after {
+    position: absolute;
+    z-index: -1;
+    content: '';
+    top: 100%;
+    left: 5%;
+    height: 10px;
+    width: 90%;
+    opacity: 1;
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 80%);
+}
+.bg-img{
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.white-color {
+	color: #fff;
+}
+.bg-black {
+	background: #38424e;
+}
+.bg-light {
+	background: #f7f9fd;
+}
+.bg-teal {
+	background: #32c0c3;
+}
+.bg-transparent {
+	background: transparent;
+}
+.text-teal {
+	color: #32c0c3;
+}
+.overlay-light {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.font-weight-light {
+	font-weight: 100;
+}
+.font-weight-regular {
+	font-weight: 300;
+}
+.font-weight-medium {
+	font-weight: 500;
+}
+.font-weight-semibold {
+	font-weight: 600;
+}
+.text-underline {
+	text-decoration: underline;
+}
+.text-underline:hover {
+	text-decoration: underline;
+}
+
+/* Common CSS */
+.p-0{padding: 0;}.pl-0 {padding-left: 0px;}.pr-0 {padding-right: 0px;}.pt-0 {padding-top: 0px;}.pb-0 {padding-bottom: 0px;}.p-5{padding: 5px;}.pl-5 {padding-left: 5px;}.pr-5 {padding-right: 5px;}.pt-5 {padding-top: 5px;}.pb-5 {padding-bottom: 5px;}.p-20{padding: 20px;}.pl-20 {padding-left: 20px;}.pr-20 {padding-right: 20px;}.pt-20 {padding-top: 20px;}.pb-20 {padding-bottom: 20px;}.p-30{padding: 30px;}.pl-30 {padding-left: 30px;}.pr-30 {padding-right: 30px;}.pt-30 {	padding-top: 30px;}.pb-30 {padding-bottom: 30px;}.p-40{padding: 40px;}.pl-40 {padding-left: 40px;}.pr-40 {padding-right: 40px;}.pt-40 {padding-top: 40px;}.pb-40 {padding-bottom: 40px;}.p-50{padding: 50px;}.pl-50 {padding-left: 50px;}.pr-50 {padding-right: 50px;}.pt-50 {padding-top: 50px;}.pb-50 {padding-bottom: 50px;}.p-60 {padding: 60px;}.pl-60 {padding-left: 60px;}.pr-60 {padding-right: 60px;}.pt-60 {padding-top: 60px;}.pb-60 {padding-bottom: 60px;}.pl-65 {padding-left: 65px;}.pr-65 {padding-right: 65px;}.pl-80 {padding-left: 80px;}.pr-80 {padding-right: 80px;}.p-100 {padding: 100px;}.pl-100 {padding-left: 100px;}.pr-100 {padding-right: 100px;}.pt-90 {padding-top: 90px;}.pb-90 {padding-bottom: 90px;}.pt-100 {padding-top: 100px;}.pb-100 {padding-bottom: 100px;}.p-120 {padding: 120px;}.pl-120 {padding-left: 120px;}.pr-120 {padding-right: 120px;}.pt-120 {padding-top: 120px;}.pb-120 {padding-bottom: 120px;}
+
+.m-0{margin: 0;}.ml-0 {margin-left: 0px;}.mr-0{margin-right: 0px;}.mt-0 {margin-top: 0px;}.mb-0 {margin-bottom: 0px;}.m-10{margin: 10px;}.ml-10 {margin-left: 10px;}.mr-10{margin-right: 10px;}.mt-10 {margin-top: 10px;}.mt-15 {margin-top: 15px;}.mb-10 {margin-bottom: 10px;}.m-20{margin: 20px;}.ml-20 {margin-left: 20px;}.mr-20{margin-right: 20px;}.mt-20 {margin-top: 20px;}.mb-20 {margin-bottom: 20px;}.m-30{margin: 30px;}.ml-30 {margin-left: 30px;}.mr-30{margin-right: 30px;}.mt-30 {margin-top: 30px;}.mb-30 {margin-bottom: 30px;}.m-40{margin: 40px;}.ml-40 {margin-left: 40px;}.mr-40{margin-right: 40px;}.mt-40 {margin-top: 40px;}.mb-40 {margin-bottom: 40px;}.mb-50 {margin-bottom: 50px;}.m-60{margin: 60px;}.ml-60 {margin-left: 60px;}.mr-60{margin-right: 60px;}.mt-60 {margin-top: 60px;}.mb-60 {margin-bottom: 60px;}.mt-80 {margin-top: 80px;}.ml-80 {margin-left: 80px;} .mt-100 {margin-top: 100px;} .mt-120 {margin-top: 120px;}
+

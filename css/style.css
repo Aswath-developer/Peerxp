@@ -1,0 +1,257 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+
+ 
+-------------------------------------------------------------------*/
+section.login-form {
+    height: 100vh;
+}
+.login-position{
+	width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-container {
+	max-width: 420px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 20px;
+    background: rgb(255 255 255 / 17%);
+    -webkit-box-shadow: 1px 2px 10px 1px rgba(163,163,163,1);
+    -moz-box-shadow: 1px 2px 10px 1px rgba(163,163,163,1);
+    box-shadow: 1px 2px 10px 1px rgba(163,163,163,1);
+}
+.login-container form label{
+	display: block;
+    text-align: left;
+    font-size: 1em;
+}
+.login-container form input[type="text"],
+.login-container form input[type="password"]{
+	width: 100%;
+    height: 42px;
+    padding: 8px 10px;
+    border: 0;
+    background: #fff;
+    border-radius: 4px;
+    border: 1px solid #a0a0a0;
+}
+.login-container form input[type="text"]:focus,
+.login-container form input[type="password"]:focus{
+	border-color:#2196f3;
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(200,196,255,1);
+	-moz-box-shadow: 0px 0px 10px 0px rgba(200,196,255,1);
+	box-shadow: 0px 0px 10px 0px rgba(200,196,255,1);
+}
+.login-container form input[type="submit"]{
+	width: 100%;
+    border: 0;
+    background: #2196f3;
+    padding: 8px 8px 12px 8px;
+    color: #fff;
+    line-height: 22px;
+    border-radius: 4px;
+    transition: .3s;
+}
+.login-container form input[type="submit"]:hover{
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(200,196,255,1);
+	-moz-box-shadow: 0px 0px 10px 0px rgba(200,196,255,1);
+	box-shadow: 0px 0px 10px 0px rgba(200,196,255,1);
+}
+.user-image{
+	text-align: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.user-image i{
+	font-size: 66px;
+    border: 3px solid #2196F3;
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    width: 120px;
+    height: 120px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    color: #2196f3;
+}
+.login-header{
+	text-align:center;
+}
+.login-header h4{
+	margin-bottom: 30px;
+    font-size: 30px;
+}
+.header-section{
+	-webkit-box-shadow: 0px 2px 5px 0px rgba(184,184,184,1);
+	-moz-box-shadow: 0px 2px 5px 0px rgba(184,184,184,1);
+	box-shadow: 0px 2px 5px 0px rgba(184,184,184,1);
+	margin-bottom:10px;
+	overflow:visible;
+}
+.logo{
+	text-align: left;
+    padding: 20px 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.logo h4{
+	font-family: 'Roboto Slab';
+    color: #03A9F4;
+    font-size: 22px;
+    letter-spacing: 0.8px;
+}
+.inner-user{
+	padding: 20px 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.inner-user i{
+	font-size: 18px;
+    margin-right: 12px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eee;
+    border-radius: 50%;
+    color: #868686;
+}
+.inner-user .dropdown button{
+	background: transparent;
+	border: 0;
+	display: flex;
+	align-items: center;
+}
+.dropdown-menu li{
+	margin-bottom: 5px;
+}
+.dropdown-menu li a{
+	padding:10px;
+}
+.dropdown-menu{
+	left:-40px;
+}
+section.rental-info,
+section.rental-section{
+	padding-top: 20px;
+    padding-bottom: 20px;
+    background: transparent;
+}
+
+.rental-header{
+	text-align:left;
+}
+.rental-header h2{
+	font-size: 26px;
+    padding-bottom: 6px;
+    margin-bottom: 15px;
+    color: #000000;
+    border-radius: 5px;
+    font-weight: normal;
+}
+.rental-header a{
+	
+}
+.rental-card{
+	display: block;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(184,184,184,1);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(184,184,184,1);
+    box-shadow: 0px 0px 5px 0px rgba(184,184,184,1);
+    background-color: #fff;
+	transition:.3s;
+}
+.bg1{
+	background: rgb(103 58 183 / 0.55);
+}
+.bg2{
+	background: rgb(255 87 34 / 0.55);
+}
+.bg3{
+	background: rgb(0 150 136 / 0.55);
+}
+.rental-title{
+	text-align: center;
+    border-radius: 5px 5px 0 0;
+}
+.rental-title p{
+	color: #fff;
+}
+.rental-details{
+	padding: 15px;
+}
+.rental-details p.label-text{
+	font-size: 18px;
+    font-weight: 600;
+}
+.rental-details p.value-text{
+	color: #6b6b6b;
+    font-weight: 400;
+}
+h5.view-more{
+	text-align: center;
+    margin-top: 18px;
+    font-size: 18px;
+    color: #03A9F4;
+    font-weight: normal;
+    text-decoration: underline;
+}
+.rental-card:hover{
+	-webkit-box-shadow: 0px 0px 8px 2px rgba(153,153,153,1);
+	-moz-box-shadow: 0px 0px 8px 2px rgba(153,153,153,1);
+	box-shadow: 0px 0px 8px 2px rgba(153,153,153,1);
+}
+.upcoming-rental{
+	border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(184,184,184,1);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(184,184,184,1);
+    box-shadow: 0px 0px 5px 0px rgba(184,184,184,1);
+    background-color: #fff;
+    transition: .3s;
+}
+.upcoming-rental table{
+	display:table;
+}
+.upcoming-rental table thead{
+	
+}
+.upcoming-rental table tbody tr td{
+	
+}
+.upcoming-rental table tbody tr td span.shop-no{
+	width: 34px;
+    height: 34px;
+    display: flex;
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+	color: #fff;
+    line-height: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
