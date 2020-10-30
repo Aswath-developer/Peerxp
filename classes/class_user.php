@@ -84,7 +84,7 @@ class User {
 		return $result;
 	}
 	function getUserByIDLoginDetails(){
-		$query = "SELECT user_id,user_name,user_email,user_phno,user_password,user_status FROM ".USER_MASTER." WHERE user_status != '0' and ( user_name = '".$this->user_email."'  OR user_email = '".$this->user_email."' ) AND user_password = '".$this->user_password."' AND user_visibility = 1";
+		$query = "SELECT user_id,user_name,user_email,user_phno,user_password,user_status FROM ".USER_MASTER." WHERE user_status != '0' and ( user_name = '".$this->user_email."'  OR user_email = '".$this->user_email."' ) AND user_password = '".md5($this->user_password)."' AND user_visibility = 1";
 		$result = mysqli_query($GLOBALS["___mysqli_ston"], $query);
 		return $result;
 	}
