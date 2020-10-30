@@ -10,7 +10,7 @@
 						<a href="ticket-form.php" class="btn btn-primary">Create Ticket</a>
 					</div>
 				</div>
-				<div class="col-lg-12">
+				<div class="col-lg-12"> 
 					<div class="upcoming-rental">
 						<table id="ListCE" class="table table-responsive">
 							<thead>
