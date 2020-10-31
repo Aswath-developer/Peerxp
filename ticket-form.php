@@ -125,9 +125,9 @@
 									<div class="form-group">
 										<select class="form-control" name="priority">
 											<option value="">-None-</option>
-											<option value="1">High - Production System Down</option>
-											<option value="2">Medium - System Impaired</option>
-											<option value="3">Low - General Guidance</option>
+											<option value="High">High - Production System Down</option>
+											<option value="Medium">Medium - System Impaired</option>
+											<option value="Low">Low - General Guidance</option>
 										</select>
 									</div>
 								</div>
@@ -205,9 +205,9 @@
 									<div class="form-group">
 										<select class="form-control" name="sup_priority">
 											<option value="0">-None-</option>
-											<option value="1">High - Production System Down</option>
-											<option value="2">Medium - System Impaired</option>
-											<option value="3">Low - General Guidance</option>
+											<option value="High">High - Production System Down</option>
+											<option value="Medium">Medium - System Impaired</option>
+											<option value="Low">Low - General Guidance</option>
 										</select>
 									</div>
 								</div>
@@ -351,7 +351,14 @@ $('#create_tic').validate({
                 async: !1,
                 dataType: 'json',
                 success: function(response) {
-                     console.log(response);
+					if(response == 1){
+						swal("Thank You!", "Ticket has been submitted", "success");
+						setTimeout(function(){
+							window.location.href = 'index.php';
+						},3000);
+					}else{
+						swal("UnSuccessful!", "Something went wrong, Try again!", "error");
+					}
                     
                 },
                 error: function(response) {

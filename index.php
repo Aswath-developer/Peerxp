@@ -1,5 +1,10 @@
-<?php include("includes/header.php"); ?>
-	
+<?php 
+include("includes/header.php"); 
+include("classes/class_ticket.php");
+
+$obj_tic = new Ticket();
+$res=$obj_tic->getAllTickets();
+?>
 	
 	<section class="rental-info">
 		<div class="container-fluid">
@@ -10,50 +15,32 @@
 						<a href="ticket-form.php" class="btn btn-primary">Create Ticket</a>
 					</div>
 				</div>
-				<div class="col-lg-12"> 
+				<div class="col-lg-12">
 					<div class="upcoming-rental">
 						<table id="ListCE" class="table table-responsive">
 							<thead>
 								<tr>
 									<th>S.No</th>
+									<th>Ticket ID</th>
 									<th>Name</th>
+									<th>Ticket Number</th>
 									<th>Subject</th>
 									<th>Date</th>
 									<th>Status</th>
 								</tr>
 							</thead>
 							<tbody>
+							<?php for($i=0; $i<count($res['data']); $i++){ ?>
 								<tr>
-									<td><span class="shop-no bg1">1</span></td>
-									<td>Jack</td>
-									<td>New Ticket</td>
-									<td>05 Oct 2020</td>
-									<td><span class="status pending">Pending</span></td>
-								</tr><tr>
-									<td><span class="shop-no bg1">2</span></td>
-									<td>Smith</td>
-									<td>Raised new Ticket</td>
-									<td>05 Oct 2020</td>
-									<td><span class="status pending">Closed</span></td>
-								</tr><tr>
-									<td><span class="shop-no bg1">3</span></td>
-									<td>Harry</td>
-									<td>New issues - Ticket</td>
-									<td>05 Oct 2020</td>
-									<td><span class="status pending">Open</span></td>
-								</tr><tr>
-									<td><span class="shop-no bg1">4</span></td>
-									<td>John</td>
-									<td>05 Oct 2020</td>
-									<td>New issues - Ticket</td>
-									<td><span class="status pending">Pending</span></td>
-								</tr><tr>
-									<td><span class="shop-no bg1">5</span></td>
-									<td>Depp</td>
-									<td>New Ticket</td>
-									<td>05 Oct 2020</td>
-									<td><span class="status pending">Closed</span></td>
+									<td><span class="shop-no bg1"><?php echo $i+1; ?></span></td>
+									<td><?php echo $res['data'][$i]['id']; ?></td>
+									<td><?php echo $res['data'][$i]['contact']['firstName'].' '.$res['data'][$i]['contact']['lastName']; ?></td>
+									<td><?php echo $res['data'][$i]['ticketNumber']; ?></td>
+									<td><?php echo $res['data'][$i]['subject']; ?></td>
+									<td><?php echo date("d-m-Y", strtotime($res['data'][$i]['createdTime'])); ?></td>
+									<td><span class="status pending"><?php echo $res['data'][$i]['status']; ?></span></td>
 								</tr>
+							<?php } ?>
 							</tbody>
 						</table>
 					</div>
